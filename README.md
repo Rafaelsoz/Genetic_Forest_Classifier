@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains an implementation of a genetic algorithm for evolving decision trees for classification tasks. The decision tree structure is defined by the `Node` class, and the entire genetic algorithm is orchestrated by the `Genetic` class. The project was developed by Rafael Souza, João Augusto Fernandes, Thiago Ambiel Arthur Rezende, and João Pedro.
+This repository contains an implementation of a genetic algorithm for evolving decision trees for classification tasks. The decision tree structure is defined by the `Node` class, and the entire genetic algorithm is orchestrated by the `Genetic` class. 
 
 ## Classes
 
