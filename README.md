@@ -46,3 +46,9 @@ predictions = genetic_forest.predict(x_test, bests=True)
 # Evaluate accuracy
 accuracy_value = genetic_forest.accuracy(predictions, y_test)
 print("Accuracy:", accuracy_value)
+
+# Contributors
+- Rafael Souza
+- João Augusto Fernandes
+- Thiago Ambiel Arthur Rezende
+- João Pedro
