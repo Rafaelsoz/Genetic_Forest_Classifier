@@ -1,4 +1,4 @@
-# Genetic Tree Classifier
+# Genetic Forest Classifier
 
 ## Overview
 
@@ -14,25 +14,35 @@ The `Node` class represents a node in the decision tree. Each node has attribute
 
 The `Tree` class is responsible for creating the initial decision tree and defining its structure. It uses the `Node` class to represent nodes. The decision tree is then evolved using a genetic algorithm, and the best tree is determined based on classification accuracy.
 
-### 3. `Genetic`
+### 3. `GenForest`
 
-The `Genetic` class implements the genetic algorithm for evolving decision trees. It includes methods for initializing the population, evaluating the fitness of individuals, and performing crossover and mutation operations to evolve the population.
+The `GenForest` class implements a Genetic Forest, an ensemble of decision trees using genetic algorithms. It utilizes the `Tree`, `Node`, and `Genetic` classes to train the ensemble and make predictions.
 
 ## Usage
 
 To use this implementation, follow these steps:
 
-1. **Create a Tree:**
+```python
+# Import necessary libraries and classes
+import numpy as np
+from gen_forest import GenForest
 
-   ```python
-   # Example usage
-   tree = Tree(all_features, targets, max_depth=5)
-   tree.create()
-# Example usage
-genetic_algorithm = Genetic(pop_size=10, epochs=100, model=tree, mutation_rate=4e-2)
-# Example usage
-genetic_algorithm.train(data, target, bar_train=True, desc='Training')
-# Example usage
-tree.show()
+# Example data
+all_features = ["feature1", "feature2", "feature3"]
+targets = np.array([0, 1, 0, 1, 1])
 
+# Create a GenForest instance
+genetic_forest = GenForest(features=all_features, targets=targets, n_species=5, n_features=3, n_agents=10, epochs=50, n_deaths=5, rounds_deaths=3, seed=123)
 
+# Fit the GenForest model on training data
+x_train = np.random.rand(100, 3)
+y_train = np.random.randint(2, size=100)
+genetic_forest.fit(x_train, y_train)
+
+# Make predictions using the GenForest model
+x_test = np.random.rand(10, 3)
+predictions = genetic_forest.predict(x_test, bests=True)
+
+# Evaluate accuracy
+accuracy_value = genetic_forest.accuracy(predictions, y_test)
+print("Accuracy:", accuracy_value)
