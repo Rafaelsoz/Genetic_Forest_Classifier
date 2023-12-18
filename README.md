@@ -63,15 +63,15 @@ Size of Population: [75, 100, 125, 150, 200]
 Only a few models achieved a similar score to the Random Forest (baseline algorithm).
 
 ### Performance Analysis
-|  | n\_models | n\_epochs | n\_population | score\_pos | time |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 3 | 20.000 | 75.000 | 150.000 | 0.981 | 140.051 |
-| 27 | 30.000 | 100.000 | 125.000 | 0.981 | 273.879 |
-| 31 | 30.000 | 125.000 | 100.000 | 0.981 | 237.955 |
-| 52 | 35.000 | 125.000 | 125.000 | 0.981 | 361.880 |
-| 56 | 35.000 | 150.000 | 100.000 | 0.981 | 347.313 |
-| 65 | 40.000 | 100.000 | 75.000 | 0.981 | 196.178 |
-| 102 | 70.000 | 75.000 | 125.000 | 0.981 | 551.002 |
+| n\_models | n\_epochs | n\_population | score\_pos | time |
+| :--- | :--- | :--- | :--- | :--- |
+| 20 | 75 | 150 | 0.981 | 140.051 |
+| 30 | 100 | 125 | 0.981 | 273.879 |
+| 30 | 125 | 100 | 0.981 | 237.955 |
+| 35 | 125 | 125 | 0.981 | 361.880 |
+| 35 | 150 | 100 | 0.981 | 347.313 |
+| 40 | 100 | 75 | 0.981 | 196.178 |
+| 70 | 75 | 125 | 0.981 | 551.002 |
 
 Considering both execution time and improvements in the score metric, we have chosen the following parameter intervals for the study:
 
