@@ -26,22 +26,40 @@ To use this implementation, follow these steps:
 # Import necessary libraries and classes
 import numpy as np
 from gen_forest import GenForest, accuracy
+from sklearn.datasets import load_wine
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
 
-# Example data
-all_features = ["feature1", "feature2", "feature3"]
-targets = np.array([0, 1, 0, 1, 1])
+# Load Wini data
+data = load_wine()
+
+df = pd.DataFrame(data['data'], columns=data['feature_names'])
+Y = data['target']
+X = df.to_numpy()
+
+features = data['feature_names']
+targets = data['target_names']
+
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.33, random_state=42)
+
+# Normalizing the data
+scaler = StandardScaler()
+scaler.fit(x_train)
+
+x_train = scaler.transform(x_train)
+x_test = scaler.transform(x_test)
 
 # Create a GenForest instance
-genetic_forest = GenForest(features=all_features, targets=targets, n_species=5, n_features=3, n_agents=10, epochs=50, n_deaths=5, rounds_deaths=3, seed=123)
+model = GenForest(features, targets,
+                      n_species=100, n_features=np.random.randint(6, 10),
+                      n_agents=200, epochs=200,
+                      n_deaths=5, rounds_deaths=20)
 
-# Fit the GenForest model on training data
-x_train = np.random.rand(100, 3)
-y_train = np.random.randint(2, size=100)
-genetic_forest.fit(x_train, y_train)
+# Fit model
+model.fit(x_train, y_train)
 
 # Make predictions using the GenForest model
-x_test = np.random.rand(10, 3)
-predictions = genetic_forest.predict(x_test, bests=True)
+predictions = model.predict(x_test, bests=False)
 
 # Evaluate accuracy
 accuracy_value = accuracy(predictions, y_test)
