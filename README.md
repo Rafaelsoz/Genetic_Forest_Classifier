@@ -85,6 +85,19 @@ Size of Population: [125, 200]
 
 First, a study was conducted to assess the effects of the Mutation Rate, the introduction of Predation and Genocide, and the crossover method (Elitism - the best vs all and Tournament random parents).
 
+To assess the differences between the methods, we monitored the population's Diversity (via standard deviation) and the overall improvement of the best individual across epochs.
+
+In addition to the general population, we established a secondary group (Elite) where only mutation was applied (asexual reproduction), targeting a more refined tuning of the results.
+
+Examples are provided below:
+### Elitism w/ Predation and Genocide
+![Alt text](Benchmark/Images/diagn_0.04_Elitismo_Predacao_Genocidio_1.png)
+![Alt text](Benchmark/Images/pop_0.04_Elitismo_Predacao_Genocidio_1.png)
+
+### Elitism w/o Predation and Genocide
+![Alt text](Benchmark/Images/diagn_0.04_Elitismo_Sem_pred_Sem_gen_20.png)
+![Alt text](Benchmark/Images/pop_0.04_Elitismo_Sem_pred_Sem_gen_20.png)
+
 Following this, we examined the results on two datasets while maintaining a constant Mutation rate (0.04):
 
 Wine dataset: A simpler dataset consisting of (178x13) dimensions.
