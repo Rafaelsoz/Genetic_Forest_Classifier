@@ -25,7 +25,7 @@ To use this implementation, follow these steps:
 ```python
 # Import necessary libraries and classes
 import numpy as np
-from gen_forest import GenForest
+from gen_forest import GenForest, accuracy
 
 # Example data
 all_features = ["feature1", "feature2", "feature3"]
@@ -44,7 +44,7 @@ x_test = np.random.rand(10, 3)
 predictions = genetic_forest.predict(x_test, bests=True)
 
 # Evaluate accuracy
-accuracy_value = genetic_forest.accuracy(predictions, y_test)
+accuracy_value = accuracy(predictions, y_test)
 print("Accuracy:", accuracy_value)
 ```
 
