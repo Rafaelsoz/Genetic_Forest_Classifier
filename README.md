@@ -58,12 +58,12 @@ After the creation of the **n** species, an exclusive environment is created for
 
 After optimizing the models, where we will have good, average and bad species mixed together, we use the same random forest approach to classify an input, and it is possible to do it in the following ways:
 
-## 1) Soft voting, where the weight of each tree's vote is weighted according to the score it obtained at the time of training:
+### 1) Soft voting, where the weight of each tree's vote is weighted according to the score it obtained at the time of training:
 - $$error = 1 - accuracy$$
 - $$weight = \frac{1}{error^2 + \epsilon}$$
 - $$\text{Normalization of weights}$$
 
-## 2) Vote for the best, here in a simpler way using Hard Voting only for the top species that obtained the highest score in the training stage
+### 2) Vote for the best, here in a simpler way using Hard Voting only for the top species that obtained the highest score in the training stage
 
 Finally, we add up the votes and take the one with the highest probability or number of votes as the predicted class.
 
