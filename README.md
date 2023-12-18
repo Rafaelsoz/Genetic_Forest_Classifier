@@ -50,5 +50,6 @@ print("Accuracy:", accuracy_value)
 ### Contributors
 - Rafael Souza
 - João Augusto Fernandes
-- Thiago Ambiel Arthur Rezende
+- Thiago Ambiel
+- Arthur Rezende
 - João Pedro Farjoun Silva
