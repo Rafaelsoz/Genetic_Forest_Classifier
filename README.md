@@ -51,4 +51,4 @@ print("Accuracy:", accuracy_value)
 - Rafael Souza
 - João Augusto Fernandes
 - Thiago Ambiel Arthur Rezende
-- João Pedro
+- João Pedro Farjoun Silva
