@@ -58,7 +58,7 @@ After the creation of the **n** species, an exclusive environment is created for
 
 ![Alt text](Benchmark/Images/example1.png)
 
-### Classification
+## Classification
 After optimizing the models, where we will have good, average and bad species mixed together, we use the same random forest approach to classify an input, and it is possible to do it in the following ways:
 
 #### 1) Soft voting, where the weight of each tree's vote is weighted according to the score it obtained at the time of training:
