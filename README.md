@@ -98,6 +98,9 @@ Examples are provided below:
 ![Alt text](Benchmark/Images/diagn_0.04_Elitismo_Sem_pred_Sem_gen_20.png)
 ![Alt text](Benchmark/Images/pop_0.04_Elitismo_Sem_pred_Sem_gen_20.png)
 
+### Ensemble Genetic - Elitism w/ Predation and Genocide
+![Alt text](Benchmark/Images/estudo_ag2.png)
+
 Following this, we examined the results on two datasets while maintaining a constant Mutation rate (0.04):
 
 Wine dataset: A simpler dataset consisting of (178x13) dimensions.
